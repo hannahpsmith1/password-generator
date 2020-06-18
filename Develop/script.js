@@ -50,12 +50,14 @@ function generatePassword (){
   var confirmNum  = confirm ("Do you want to use numbers 0-9?");
   var confirmSpecial = confirm ("Do you want to use special characters");
 
-  // while (!confirmUpper && !confirmLower && !confirmNum && !confirmSpecial) {
-  //   alert("You must select at least one character type!");
-  //   confirmUpper = confirm("Would you like to use uppercase letters?");
-  //   confirmLower = confirm("Would you like to use lowercase letters?");
-  //   confirmNum = confirm("Would you like to use numbers?");
-  //   confirmSpecial = confirm("Would you like to use special characters?");
+  while (!confirmUpper && !confirmLower && !confirmNum && !confirmSpecial) {
+    alert("You must select at least one character type!");
+    confirmUpper = confirm("Would you like to use uppercase letters?");
+    confirmLower = confirm("Would you like to use lowercase letters?");
+    confirmNum = confirm("Would you like to use numbers?");
+    confirmSpecial = confirm("Would you like to use special characters?");
+  }
+  
 
 
   
@@ -83,12 +85,6 @@ function generatePassword (){
 return result
 }
 
-// if (promptLength < 8) {
-//   alert ("password must be at least 8 characters long.")
-//   else {
-//     writePassword()
-//   }
-// }
 
 
 function writePassword() {
