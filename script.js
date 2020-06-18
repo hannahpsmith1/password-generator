@@ -57,7 +57,7 @@ function generatePassword (){
     confirmNum = confirm("Would you like to use numbers?");
     confirmSpecial = confirm("Would you like to use special characters?");
   }
-  
+
 
 
   
@@ -97,6 +97,26 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+// let first = true;
+// function generatePassword() {
+//   // Define your variables
+//   ...
+//   var result = "";
+//   var confirmUppercase;
+//   if (first) {
+//     // Assign values and add to options
+//     confirmUppercase = alert('asdf');
+//     ...
+//     first = false;
+//   }
+//   // generate password
+//   if (confirmUppercase) {
+//     // Add the options
+//   }
+//   return result; // You'll do this either way.
+// }
 
 
 
