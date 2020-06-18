@@ -96,7 +96,93 @@ function writePassword() {
 }
 
 // Add event listener to generate button
+//   var button = document.createElement("button");
+//   button.innerHTML = "Copy Password";
+
+//   var body = document.getElementsByTagName("card-footer")[1];
+//   body.appendChild(button);
+
+
 generateBtn.addEventListener("click", writePassword);
+
+// 1. Create the button
+var button = document.createElement("button");
+var buttonb = document.getElementsByID("button");
+card-footer.appendChild(buttonb);
+
+function copyPassword(){
+  document.getElementById("placeholder").select();
+
+  document.execCommand("Copy");
+
+  alert("Password copied to clipboard!");
+}
+
+generateBtn.addEventListener("click", copyPassword);
+
+// button.addEventListener ("click", copyPassword() {
+
+//   alert("did something");
+
+// // 2. Append somewhere
+// var buttonb = document.getElementsByTagName("card-footer")[0];
+// card-footer.appendChild(button);
+
+// // 3. Add event handler
+// button.addEventListener ("click", function() {
+
+//   alert("did something");
+
+
+// function copyPassword(){
+//     document.getElementById("placeholder").select();
+
+//   document.execCommand("Copy");
+
+//   alert("Password copied to clipboard!");
+
+// }
+
+//   var body = document.body;
+//   var h1El = document.createElement("h1");
+//   h1El.textContent = "<h1>Welcome to my page</h1>";
+//   body.appendChild(h1El);
+
+
+// generateBtn.addEventListener("click", copyPassword);
+
+
+// 1. Create the button
+// var button = document.createElement("button");
+// button.innerHTML = "Do Something";
+
+// // 2. Append somewhere
+// var body = document.getElementsByTagName("card-footer")[0];
+// card-footer.appendChild(button);
+
+// // 3. Add event handler
+// button.addEventListener ("click", function() {
+//   alert("did something");
+// });
+
+
+
+
+
+// document.getElementById("myBtn").addEventListener("click", function(){
+//   document.getElementById("demo").innerHTML = "Hello World";
+// });
+
+
+
+
+// function copyPassword(){
+
+//     document.getElementById("button2").select();
+  
+//     document.execCommand("Copy");
+  
+//     alert("Password copied to clipboard!");
 
 
 // let first = true;
