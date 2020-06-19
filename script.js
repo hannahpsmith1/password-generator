@@ -1,7 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-
 var stringUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var stringLower = "abcdefghijklmnopqrstuvwxyz"
 var stringNum ="0123456789"
@@ -45,10 +44,10 @@ function generatePassword (){
   while (isNaN(promptLength) || promptLength < 8 || promptLength > 128) promptLength = Number(prompt("Length must be 8-128 characters. How many characters would you like your password to be?"));
   // this adds a condition that password length must be between numbers 8 and 128.  The isNaN() function determines whether a value is an illegal number
 
-  var confirmUpper = confirm ("Do you want CAPITALS included?");
-  var confirmLower = confirm ("Do you want lowercase letters?");
-  var confirmNum  = confirm ("Do you want to use numbers 0-9?");
-  var confirmSpecial = confirm ("Do you want to use special characters");
+  var confirmUpper = confirm ("Would you like to use uppercase letters?");
+  var confirmLower = confirm ("Would you like to use lowercase letters?");
+  var confirmNum  = confirm ("Would you like to use numbers?");
+  var confirmSpecial = confirm ("Would you like to use special characters?");
 
   while (!confirmUpper && !confirmLower && !confirmNum && !confirmSpecial) {
     alert("You must select at least one character type!");
@@ -56,11 +55,8 @@ function generatePassword (){
     confirmLower = confirm("Would you like to use lowercase letters?");
     confirmNum = confirm("Would you like to use numbers?");
     confirmSpecial = confirm("Would you like to use special characters?");
-  }
+}
 
-
-
-  
   var result = ""
   var options = ""
 
@@ -86,7 +82,6 @@ return result
 }
 
 
-
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -95,147 +90,21 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
-//   var button = document.createElement("button");
-//   button.innerHTML = "Copy Password";
-
-//   var body = document.getElementsByTagName("card-footer")[1];
-//   body.appendChild(button);
-
 
 generateBtn.addEventListener("click", writePassword);
-
-// 1. Create the button
+// console.log("check")
 var button = document.createElement("button");
-var buttonb = document.getElementsByID("button");
-card-footer.appendChild(buttonb);
+var cardFooter = document.getElementsByClassName("card-footer")[0];
+cardFooter.appendChild(button);
+
+button.innerHTML="Copy Password";
 
 function copyPassword(){
-  document.getElementById("placeholder").select();
-
+  document.getElementById("password").select();
   document.execCommand("Copy");
 
   alert("Password copied to clipboard!");
 }
 
-generateBtn.addEventListener("click", copyPassword);
+button.addEventListener("click", copyPassword);
 
-// button.addEventListener ("click", copyPassword() {
-
-//   alert("did something");
-
-// // 2. Append somewhere
-// var buttonb = document.getElementsByTagName("card-footer")[0];
-// card-footer.appendChild(button);
-
-// // 3. Add event handler
-// button.addEventListener ("click", function() {
-
-//   alert("did something");
-
-
-// function copyPassword(){
-//     document.getElementById("placeholder").select();
-
-//   document.execCommand("Copy");
-
-//   alert("Password copied to clipboard!");
-
-// }
-
-//   var body = document.body;
-//   var h1El = document.createElement("h1");
-//   h1El.textContent = "<h1>Welcome to my page</h1>";
-//   body.appendChild(h1El);
-
-
-// generateBtn.addEventListener("click", copyPassword);
-
-
-// 1. Create the button
-// var button = document.createElement("button");
-// button.innerHTML = "Do Something";
-
-// // 2. Append somewhere
-// var body = document.getElementsByTagName("card-footer")[0];
-// card-footer.appendChild(button);
-
-// // 3. Add event handler
-// button.addEventListener ("click", function() {
-//   alert("did something");
-// });
-
-
-
-
-
-// document.getElementById("myBtn").addEventListener("click", function(){
-//   document.getElementById("demo").innerHTML = "Hello World";
-// });
-
-
-
-
-// function copyPassword(){
-
-//     document.getElementById("button2").select();
-  
-//     document.execCommand("Copy");
-  
-//     alert("Password copied to clipboard!");
-
-
-// let first = true;
-// function generatePassword() {
-//   // Define your variables
-//   ...
-//   var result = "";
-//   var confirmUppercase;
-//   if (first) {
-//     // Assign values and add to options
-//     confirmUppercase = alert('asdf');
-//     ...
-//     first = false;
-//   }
-//   // generate password
-//   if (confirmUppercase) {
-//     // Add the options
-//   }
-//   return result; // You'll do this either way.
-// }
-
-
-
-
-
-
-// clipboard.addEventListener('click', () => {
-// 	const textarea = document.createElement('textarea');
-// 	const password = resultEl.innerText;
-	
-// 	if(!password) { return; }
-	
-// 	textarea.value = password;
-// 	document.body.appendChild(textarea);
-// 	textarea.select();
-// 	document.execCommand('copy');
-// 	textarea.remove();
-// 	alert('Password copied to clipboard');
-// });
-
-// function copyPassword(){
-
-//   document.getElementById("display").select();
-
-//   document.execCommand("Copy");
-
-//   alert("Password copied to clipboard!");
-
-// }$('#form-password').on('change', function(){
-//   pass = $('#form-password').val();
-//   if(pass.length < 6){
-//       $('#passwordmsg').html('Password must be at least 6 characters');
-//   }else {
-//       $('#passwordmsg').html("");
-  
-//   });
